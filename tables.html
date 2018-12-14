@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables</title>
+    <!-- define links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Hot Restaraunt</h1>
+            <hr>
+            <h3 class="text-center">Current Reservations and Waiting List</h3>
+            <div class="text-center">
+                <a href="/tables"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span>Make a reservation</button></a>
+                <button type="button" class="btn btn-light"><i class="fas fa-home"></i></button>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-12">
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h4>Current Reservations</h4>
+                            </div>
+                            <div class="card-body">
+                                    <ul id="tableList" class="list-group"></ul>
+                                  </div>
+                                </div>
+        
+                        </div>
+                </div>
+                <div class="card mt-4">
+                        <div class="card-header">
+                          <h4>Waiting List</h4>
+                        </div>
+                        <div class="card-body">
+                          <ul id="waitList" class="list-group"></ul>
+                        </div>
+                      </div>
+            </div>
+            <footer class="footer mt-4">
+                    <div class="container">
+                      <p>Control Panel</p>
+                      <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API
+                          Wait List</a>
+                    </div>
+                  </footer>
+    </div>
+    
+    
+</body>
+</html>
