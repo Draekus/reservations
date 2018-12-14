@@ -58,16 +58,41 @@
     
     <script>
 
+  
 $.ajax({
     type:"GET", 
-    url: "localhost:3000/api/tables", 
+    url: "/api/tables", 
     success: function(data) {
          console.log(data);
+         for (var i=0; i<data.reservations.length; i++){
+         var name = data.reservations[i].name
+         var phone = data.reservations[i].phone
+         var email = data.reservations[i].email
+         var id = data.reservations[i].id
+         let div =$('<div class="card">')
+        div.html(`
+        <div class="card-body">
+        <h5 class="card-title">Table ${i}</h5>
+        <p class="card-text">ID ${id} <br> Name: {name} <br> Email: {email} <br> Phone: {phone} </p>
+     
+               </div>
+        $(".waitlist").append(div)
+        `)
+         
+         }
+
+         for (i=0; i<data.waiting.length; i++){
+         var waitingName = data.waiting[i].name
+         var waitingPhone = data.waiting[i].phone
+         var waitingEmail = data.waiting[i].email
+         var waitingId = data.waiting[i].id
+         }
+         
         }, 
     error: function(jqXHR, textStatus, errorThrown) {
             alert(jqXHR.status);
         },
-   dataType: "jsonp"
+   dataType: "json"
 })
     //  $.get(, function(data) {
     //     console.log(data);
