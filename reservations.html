@@ -68,31 +68,32 @@
             <a href="" >API Wait List</a>
             <script>
                 
-                var user = {};
-                               var express = require('express');
-var app = express();
-var PORT = 3000;
-
-
-
-
-/// anything that hits slash will run this function
-app.get('/', function (res, req) {
-    res.setEncoding("");
-});
-app.listen(PORT, function(){
-    console.log('App listening on Port' + PORT)
-});
 
 
             $("home").click(function(){
+               
                 
+
             })
             $("viewTables").click(function(){
 
             })
             $("submit").click(function(){
+                let name = $('#name').val().trim();
+                let phone = $('#phone').val().trim();
+                let email = $('#email').val().trim();
+                let id = $('#customer-id').val().trim();
 
+                $.post("localhost:3000/api/tables",
+                {
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    id: id
+                },
+                function(data, status){
+                    alert('Post request made.');
+                });
             })
             </script>
 
