@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!--Link to Bootstrap CSS-->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
      crossorigin="anonymous">
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
      crossorigin="anonymous"></script>
-     <link rel="stylesheet" type="text/css" media="screen" href="../BootstrapPortfolio.css" />
+     
 </head>
 <body>
     <div class = "jumbotron">
@@ -21,11 +20,10 @@
        <div class = "row">
            <div class = "col-md-4"></div>
            <div class=" col-md-2 text-center">
-                <button class = " viewTables btn-primary text-center mx-0"><a href = "/tables">View Tables </a></button> 
+                <button type="button" class="viewTables btn btn-primary"><a href = "/tables"></a>Tables</button>
                     </div>
         <div class=" col-md-1 text-center">
-        <button class = " home btn-basic mx-0"> <a href = "/"> home </a></button>
-
+        <button type="button" class="home btn btn-danger"><a href = "/"></a>Home</button>
         </div>
         <div class="col-md-5"></div>
     </div>
@@ -64,13 +62,12 @@
                     <br>
                     <br>
             </div>
-            <a href="" class = "ml-50">API Table Link</a> 
-            <a href="" >API Wait List</a>
+            <a href="/api/tables" class = "ml-50">API Table Link</a> 
             <script>
                 
 
 
-            $("home").click(function(){
+            $(".home").click(function(){
                
                 
 
@@ -84,10 +81,7 @@
                 let phone = $('#phone').val().trim();
                 let email = $('#email').val().trim();
                 let id = $('#customer-id').val().trim();
-                console.log(name)
-                console.log(phone)
-                console.log(email)
-                $.post("localhost:3000/api/tables",
+                $.post("/api/tables",
                 {
                     name: name,
                     phone: phone,
