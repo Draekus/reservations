@@ -1,7 +1,6 @@
 {
   "name": "class_12.13",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +12,14 @@
   "dependencies": {
     "express": "^4.16.4",
     "path": "^0.12.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgould94/reservations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pgould94/reservations/issues"
+  },
+  "homepage": "https://github.com/pgould94/reservations#readme",
+  "description": ""
 }

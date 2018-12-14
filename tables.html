@@ -11,6 +11,9 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <!--link to javascript-->
+    <script src=assets/javascript/app.js></script>
+
 </head>
 <body>
     <div class="container">
@@ -52,7 +55,34 @@
                           Wait List</a>
                     </div>
                   </footer>
-    </div>
+    
+    <script>
+
+$.ajax({
+    type:"GET", 
+    url: "localhost:3000/api/tables", 
+    success: function(data) {
+         console.log(data);
+        }, 
+    error: function(jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.status);
+        },
+   dataType: "jsonp"
+})
+    //  $.get(, function(data) {
+    //     console.log(data);
+    //     if (data) {
+    //         $("#user").text(data.name);
+    //       $("#userName").text(data.username);
+    //       $("#mail").text(data.mail);
+    //       $("#id").text(data.id);
+        
+    //     }
+    //     else {
+    //       $("#name").text("none");
+        
+    //     }
+    </script>
     
     
 </body>
